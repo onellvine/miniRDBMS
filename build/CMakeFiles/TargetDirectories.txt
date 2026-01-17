@@ -1,0 +1,3 @@
+C:/Users/RASHID/Desktop/rdbms/build/CMakeFiles/rdbms.dir
+C:/Users/RASHID/Desktop/rdbms/build/CMakeFiles/edit_cache.dir
+C:/Users/RASHID/Desktop/rdbms/build/CMakeFiles/rebuild_cache.dir
