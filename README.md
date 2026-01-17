@@ -221,9 +221,3 @@ This project demonstrates:
 	•	Separation of concerns between database and application
 
 ⸻
-
-Conclusion
-
-This project delivers a complete, working RDBMS with a real web-based CRUD demonstration. It is suitable for systems programming coursework, portfolios, or as a foundation for further database experimentation.
-
-⸻
