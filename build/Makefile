@@ -48,27 +48,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = C:/msys64/mingw64/bin/cmake.exe
+CMAKE_COMMAND = /usr/bin/cmake.exe
 
 # The command to remove a file.
-RM = C:/msys64/mingw64/bin/cmake.exe -E rm -f
+RM = /usr/bin/cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/RASHID/Desktop/rdbms
+CMAKE_SOURCE_DIR = /c/Users/RASHID/Desktop/rdbms
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/RASHID/Desktop/rdbms/build
+CMAKE_BINARY_DIR = /c/Users/RASHID/Desktop/rdbms/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	C:/msys64/mingw64/bin/cmake.exe -E echo "No interactive CMake dialog available."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	C:/msys64/mingw64/bin/cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/RASHID/Desktop/rdbms/build/CMakeFiles C:/Users/RASHID/Desktop/rdbms/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /c/Users/RASHID/Desktop/rdbms/build/CMakeFiles /c/Users/RASHID/Desktop/rdbms/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/RASHID/Desktop/rdbms/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /c/Users/RASHID/Desktop/rdbms/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,13 +129,13 @@ rdbms/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/build
 .PHONY : rdbms/fast
 
-src/catalog.obj: src/catalog.c.obj
-.PHONY : src/catalog.obj
+src/catalog.o: src/catalog.c.o
+.PHONY : src/catalog.o
 
 # target to build an object file
-src/catalog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/catalog.c.obj
-.PHONY : src/catalog.c.obj
+src/catalog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/catalog.c.o
+.PHONY : src/catalog.c.o
 
 src/catalog.i: src/catalog.c.i
 .PHONY : src/catalog.i
@@ -153,13 +153,13 @@ src/catalog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/catalog.c.s
 .PHONY : src/catalog.c.s
 
-src/executor.obj: src/executor.c.obj
-.PHONY : src/executor.obj
+src/executor.o: src/executor.c.o
+.PHONY : src/executor.o
 
 # target to build an object file
-src/executor.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/executor.c.obj
-.PHONY : src/executor.c.obj
+src/executor.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/executor.c.o
+.PHONY : src/executor.c.o
 
 src/executor.i: src/executor.c.i
 .PHONY : src/executor.i
@@ -177,13 +177,13 @@ src/executor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/executor.c.s
 .PHONY : src/executor.c.s
 
-src/index.obj: src/index.c.obj
-.PHONY : src/index.obj
+src/index.o: src/index.c.o
+.PHONY : src/index.o
 
 # target to build an object file
-src/index.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/index.c.obj
-.PHONY : src/index.c.obj
+src/index.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/index.c.o
+.PHONY : src/index.c.o
 
 src/index.i: src/index.c.i
 .PHONY : src/index.i
@@ -201,13 +201,13 @@ src/index.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/index.c.s
 .PHONY : src/index.c.s
 
-src/lexer.obj: src/lexer.c.obj
-.PHONY : src/lexer.obj
+src/lexer.o: src/lexer.c.o
+.PHONY : src/lexer.o
 
 # target to build an object file
-src/lexer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/lexer.c.obj
-.PHONY : src/lexer.c.obj
+src/lexer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/lexer.c.o
+.PHONY : src/lexer.c.o
 
 src/lexer.i: src/lexer.c.i
 .PHONY : src/lexer.i
@@ -225,13 +225,13 @@ src/lexer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/lexer.c.s
 .PHONY : src/lexer.c.s
 
-src/main.obj: src/main.c.obj
-.PHONY : src/main.obj
+src/main.o: src/main.c.o
+.PHONY : src/main.o
 
 # target to build an object file
-src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/main.c.obj
-.PHONY : src/main.c.obj
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/main.c.o
+.PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
 .PHONY : src/main.i
@@ -249,13 +249,13 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/myparser.obj: src/myparser.c.obj
-.PHONY : src/myparser.obj
+src/myparser.o: src/myparser.c.o
+.PHONY : src/myparser.o
 
 # target to build an object file
-src/myparser.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/myparser.c.obj
-.PHONY : src/myparser.c.obj
+src/myparser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/myparser.c.o
+.PHONY : src/myparser.c.o
 
 src/myparser.i: src/myparser.c.i
 .PHONY : src/myparser.i
@@ -273,13 +273,13 @@ src/myparser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/myparser.c.s
 .PHONY : src/myparser.c.s
 
-src/mystorage.obj: src/mystorage.c.obj
-.PHONY : src/mystorage.obj
+src/mystorage.o: src/mystorage.c.o
+.PHONY : src/mystorage.o
 
 # target to build an object file
-src/mystorage.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/mystorage.c.obj
-.PHONY : src/mystorage.c.obj
+src/mystorage.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/mystorage.c.o
+.PHONY : src/mystorage.c.o
 
 src/mystorage.i: src/mystorage.c.i
 .PHONY : src/mystorage.i
@@ -297,13 +297,13 @@ src/mystorage.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/mystorage.c.s
 .PHONY : src/mystorage.c.s
 
-src/utils.obj: src/utils.c.obj
-.PHONY : src/utils.obj
+src/utils.o: src/utils.c.o
+.PHONY : src/utils.o
 
 # target to build an object file
-src/utils.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/utils.c.obj
-.PHONY : src/utils.c.obj
+src/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/utils.c.o
+.PHONY : src/utils.c.o
 
 src/utils.i: src/utils.c.i
 .PHONY : src/utils.i
@@ -321,13 +321,13 @@ src/utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/utils.c.s
 .PHONY : src/utils.c.s
 
-src/web.obj: src/web.c.obj
-.PHONY : src/web.obj
+src/web.o: src/web.c.o
+.PHONY : src/web.o
 
 # target to build an object file
-src/web.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/web.c.obj
-.PHONY : src/web.c.obj
+src/web.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdbms.dir/build.make CMakeFiles/rdbms.dir/src/web.c.o
+.PHONY : src/web.c.o
 
 src/web.i: src/web.c.i
 .PHONY : src/web.i
@@ -354,31 +354,31 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... rdbms"
-	@echo "... src/catalog.obj"
+	@echo "... src/catalog.o"
 	@echo "... src/catalog.i"
 	@echo "... src/catalog.s"
-	@echo "... src/executor.obj"
+	@echo "... src/executor.o"
 	@echo "... src/executor.i"
 	@echo "... src/executor.s"
-	@echo "... src/index.obj"
+	@echo "... src/index.o"
 	@echo "... src/index.i"
 	@echo "... src/index.s"
-	@echo "... src/lexer.obj"
+	@echo "... src/lexer.o"
 	@echo "... src/lexer.i"
 	@echo "... src/lexer.s"
-	@echo "... src/main.obj"
+	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/myparser.obj"
+	@echo "... src/myparser.o"
 	@echo "... src/myparser.i"
 	@echo "... src/myparser.s"
-	@echo "... src/mystorage.obj"
+	@echo "... src/mystorage.o"
 	@echo "... src/mystorage.i"
 	@echo "... src/mystorage.s"
-	@echo "... src/utils.obj"
+	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
-	@echo "... src/web.obj"
+	@echo "... src/web.o"
 	@echo "... src/web.i"
 	@echo "... src/web.s"
 .PHONY : help

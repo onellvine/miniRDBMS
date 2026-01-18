@@ -8,15 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/RASHID/Desktop/rdbms/src/catalog.c" "CMakeFiles/rdbms.dir/src/catalog.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/catalog.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/executor.c" "CMakeFiles/rdbms.dir/src/executor.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/executor.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/index.c" "CMakeFiles/rdbms.dir/src/index.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/index.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/lexer.c" "CMakeFiles/rdbms.dir/src/lexer.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/lexer.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/main.c" "CMakeFiles/rdbms.dir/src/main.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/main.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/myparser.c" "CMakeFiles/rdbms.dir/src/myparser.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/myparser.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/mystorage.c" "CMakeFiles/rdbms.dir/src/mystorage.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/mystorage.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/utils.c" "CMakeFiles/rdbms.dir/src/utils.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/utils.c.obj.d"
-  "C:/Users/RASHID/Desktop/rdbms/src/web.c" "CMakeFiles/rdbms.dir/src/web.c.obj" "gcc" "CMakeFiles/rdbms.dir/src/web.c.obj.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/catalog.c" "CMakeFiles/rdbms.dir/src/catalog.c.o" "gcc" "CMakeFiles/rdbms.dir/src/catalog.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/executor.c" "CMakeFiles/rdbms.dir/src/executor.c.o" "gcc" "CMakeFiles/rdbms.dir/src/executor.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/index.c" "CMakeFiles/rdbms.dir/src/index.c.o" "gcc" "CMakeFiles/rdbms.dir/src/index.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/lexer.c" "CMakeFiles/rdbms.dir/src/lexer.c.o" "gcc" "CMakeFiles/rdbms.dir/src/lexer.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/main.c" "CMakeFiles/rdbms.dir/src/main.c.o" "gcc" "CMakeFiles/rdbms.dir/src/main.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/myparser.c" "CMakeFiles/rdbms.dir/src/myparser.c.o" "gcc" "CMakeFiles/rdbms.dir/src/myparser.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/mystorage.c" "CMakeFiles/rdbms.dir/src/mystorage.c.o" "gcc" "CMakeFiles/rdbms.dir/src/mystorage.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/utils.c" "CMakeFiles/rdbms.dir/src/utils.c.o" "gcc" "CMakeFiles/rdbms.dir/src/utils.c.o.d"
+  "/c/Users/RASHID/Desktop/rdbms/src/web.c" "CMakeFiles/rdbms.dir/src/web.c.o" "gcc" "CMakeFiles/rdbms.dir/src/web.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
