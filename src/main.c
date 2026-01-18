@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-#include <dirent.h>
+#include <sys/stat.h>
 
 #include "executor.h"
 #include "lexer.h"
 #include "myparser.h"
 #include "web.h"
 
-#define mkdir(x, y) mkdir(x)
 
 void execute_sql(const char *sql)
 {
