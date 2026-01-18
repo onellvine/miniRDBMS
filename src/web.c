@@ -8,7 +8,6 @@
 
 #include "web.h"
 
-#pragma comment(lib, "ws2_32.lib")
 
 #define PORT 8080
 #define BUF 8192
