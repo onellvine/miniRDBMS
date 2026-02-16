@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/c/Users/RASHID/Desktop/rdbms/build/cmake_install.cmake"
+		"/home/therichgiraffe/Documents/miniRDBMS/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

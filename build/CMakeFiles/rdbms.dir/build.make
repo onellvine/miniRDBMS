@@ -53,10 +53,10 @@ RM = /usr/bin/cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /c/Users/RASHID/Desktop/rdbms
+CMAKE_SOURCE_DIR = /home/therichgiraffe/Documents/miniRDBMS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /c/Users/RASHID/Desktop/rdbms/build
+CMAKE_BINARY_DIR = /home/therichgiraffe/Documents/miniRDBMS/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rdbms.dir/depend.make
@@ -73,130 +73,130 @@ CMakeFiles/rdbms.dir/codegen:
 .PHONY : CMakeFiles/rdbms.dir/codegen
 
 CMakeFiles/rdbms.dir/src/catalog.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/catalog.c.o: /c/Users/RASHID/Desktop/rdbms/src/catalog.c
+CMakeFiles/rdbms.dir/src/catalog.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/catalog.c
 CMakeFiles/rdbms.dir/src/catalog.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rdbms.dir/src/catalog.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/catalog.c.o -MF CMakeFiles/rdbms.dir/src/catalog.c.o.d -o CMakeFiles/rdbms.dir/src/catalog.c.o -c /c/Users/RASHID/Desktop/rdbms/src/catalog.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rdbms.dir/src/catalog.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/catalog.c.o -MF CMakeFiles/rdbms.dir/src/catalog.c.o.d -o CMakeFiles/rdbms.dir/src/catalog.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/catalog.c
 
 CMakeFiles/rdbms.dir/src/catalog.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/catalog.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/catalog.c > CMakeFiles/rdbms.dir/src/catalog.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/catalog.c > CMakeFiles/rdbms.dir/src/catalog.c.i
 
 CMakeFiles/rdbms.dir/src/catalog.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/catalog.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/catalog.c -o CMakeFiles/rdbms.dir/src/catalog.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/catalog.c -o CMakeFiles/rdbms.dir/src/catalog.c.s
 
 CMakeFiles/rdbms.dir/src/executor.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/executor.c.o: /c/Users/RASHID/Desktop/rdbms/src/executor.c
+CMakeFiles/rdbms.dir/src/executor.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/executor.c
 CMakeFiles/rdbms.dir/src/executor.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rdbms.dir/src/executor.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/executor.c.o -MF CMakeFiles/rdbms.dir/src/executor.c.o.d -o CMakeFiles/rdbms.dir/src/executor.c.o -c /c/Users/RASHID/Desktop/rdbms/src/executor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rdbms.dir/src/executor.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/executor.c.o -MF CMakeFiles/rdbms.dir/src/executor.c.o.d -o CMakeFiles/rdbms.dir/src/executor.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/executor.c
 
 CMakeFiles/rdbms.dir/src/executor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/executor.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/executor.c > CMakeFiles/rdbms.dir/src/executor.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/executor.c > CMakeFiles/rdbms.dir/src/executor.c.i
 
 CMakeFiles/rdbms.dir/src/executor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/executor.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/executor.c -o CMakeFiles/rdbms.dir/src/executor.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/executor.c -o CMakeFiles/rdbms.dir/src/executor.c.s
 
 CMakeFiles/rdbms.dir/src/index.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/index.c.o: /c/Users/RASHID/Desktop/rdbms/src/index.c
+CMakeFiles/rdbms.dir/src/index.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/index.c
 CMakeFiles/rdbms.dir/src/index.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rdbms.dir/src/index.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/index.c.o -MF CMakeFiles/rdbms.dir/src/index.c.o.d -o CMakeFiles/rdbms.dir/src/index.c.o -c /c/Users/RASHID/Desktop/rdbms/src/index.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rdbms.dir/src/index.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/index.c.o -MF CMakeFiles/rdbms.dir/src/index.c.o.d -o CMakeFiles/rdbms.dir/src/index.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/index.c
 
 CMakeFiles/rdbms.dir/src/index.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/index.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/index.c > CMakeFiles/rdbms.dir/src/index.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/index.c > CMakeFiles/rdbms.dir/src/index.c.i
 
 CMakeFiles/rdbms.dir/src/index.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/index.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/index.c -o CMakeFiles/rdbms.dir/src/index.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/index.c -o CMakeFiles/rdbms.dir/src/index.c.s
 
 CMakeFiles/rdbms.dir/src/lexer.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/lexer.c.o: /c/Users/RASHID/Desktop/rdbms/src/lexer.c
+CMakeFiles/rdbms.dir/src/lexer.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/lexer.c
 CMakeFiles/rdbms.dir/src/lexer.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rdbms.dir/src/lexer.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/lexer.c.o -MF CMakeFiles/rdbms.dir/src/lexer.c.o.d -o CMakeFiles/rdbms.dir/src/lexer.c.o -c /c/Users/RASHID/Desktop/rdbms/src/lexer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rdbms.dir/src/lexer.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/lexer.c.o -MF CMakeFiles/rdbms.dir/src/lexer.c.o.d -o CMakeFiles/rdbms.dir/src/lexer.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/lexer.c
 
 CMakeFiles/rdbms.dir/src/lexer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/lexer.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/lexer.c > CMakeFiles/rdbms.dir/src/lexer.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/lexer.c > CMakeFiles/rdbms.dir/src/lexer.c.i
 
 CMakeFiles/rdbms.dir/src/lexer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/lexer.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/lexer.c -o CMakeFiles/rdbms.dir/src/lexer.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/lexer.c -o CMakeFiles/rdbms.dir/src/lexer.c.s
 
 CMakeFiles/rdbms.dir/src/main.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/main.c.o: /c/Users/RASHID/Desktop/rdbms/src/main.c
+CMakeFiles/rdbms.dir/src/main.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/main.c
 CMakeFiles/rdbms.dir/src/main.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rdbms.dir/src/main.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/main.c.o -MF CMakeFiles/rdbms.dir/src/main.c.o.d -o CMakeFiles/rdbms.dir/src/main.c.o -c /c/Users/RASHID/Desktop/rdbms/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rdbms.dir/src/main.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/main.c.o -MF CMakeFiles/rdbms.dir/src/main.c.o.d -o CMakeFiles/rdbms.dir/src/main.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/main.c
 
 CMakeFiles/rdbms.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/main.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/main.c > CMakeFiles/rdbms.dir/src/main.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/main.c > CMakeFiles/rdbms.dir/src/main.c.i
 
 CMakeFiles/rdbms.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/main.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/main.c -o CMakeFiles/rdbms.dir/src/main.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/main.c -o CMakeFiles/rdbms.dir/src/main.c.s
 
 CMakeFiles/rdbms.dir/src/myparser.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/myparser.c.o: /c/Users/RASHID/Desktop/rdbms/src/myparser.c
+CMakeFiles/rdbms.dir/src/myparser.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/myparser.c
 CMakeFiles/rdbms.dir/src/myparser.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rdbms.dir/src/myparser.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/myparser.c.o -MF CMakeFiles/rdbms.dir/src/myparser.c.o.d -o CMakeFiles/rdbms.dir/src/myparser.c.o -c /c/Users/RASHID/Desktop/rdbms/src/myparser.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rdbms.dir/src/myparser.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/myparser.c.o -MF CMakeFiles/rdbms.dir/src/myparser.c.o.d -o CMakeFiles/rdbms.dir/src/myparser.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/myparser.c
 
 CMakeFiles/rdbms.dir/src/myparser.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/myparser.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/myparser.c > CMakeFiles/rdbms.dir/src/myparser.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/myparser.c > CMakeFiles/rdbms.dir/src/myparser.c.i
 
 CMakeFiles/rdbms.dir/src/myparser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/myparser.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/myparser.c -o CMakeFiles/rdbms.dir/src/myparser.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/myparser.c -o CMakeFiles/rdbms.dir/src/myparser.c.s
 
 CMakeFiles/rdbms.dir/src/mystorage.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/mystorage.c.o: /c/Users/RASHID/Desktop/rdbms/src/mystorage.c
+CMakeFiles/rdbms.dir/src/mystorage.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/mystorage.c
 CMakeFiles/rdbms.dir/src/mystorage.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rdbms.dir/src/mystorage.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/mystorage.c.o -MF CMakeFiles/rdbms.dir/src/mystorage.c.o.d -o CMakeFiles/rdbms.dir/src/mystorage.c.o -c /c/Users/RASHID/Desktop/rdbms/src/mystorage.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rdbms.dir/src/mystorage.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/mystorage.c.o -MF CMakeFiles/rdbms.dir/src/mystorage.c.o.d -o CMakeFiles/rdbms.dir/src/mystorage.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/mystorage.c
 
 CMakeFiles/rdbms.dir/src/mystorage.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/mystorage.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/mystorage.c > CMakeFiles/rdbms.dir/src/mystorage.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/mystorage.c > CMakeFiles/rdbms.dir/src/mystorage.c.i
 
 CMakeFiles/rdbms.dir/src/mystorage.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/mystorage.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/mystorage.c -o CMakeFiles/rdbms.dir/src/mystorage.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/mystorage.c -o CMakeFiles/rdbms.dir/src/mystorage.c.s
 
 CMakeFiles/rdbms.dir/src/utils.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/utils.c.o: /c/Users/RASHID/Desktop/rdbms/src/utils.c
+CMakeFiles/rdbms.dir/src/utils.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/utils.c
 CMakeFiles/rdbms.dir/src/utils.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rdbms.dir/src/utils.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/utils.c.o -MF CMakeFiles/rdbms.dir/src/utils.c.o.d -o CMakeFiles/rdbms.dir/src/utils.c.o -c /c/Users/RASHID/Desktop/rdbms/src/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rdbms.dir/src/utils.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/utils.c.o -MF CMakeFiles/rdbms.dir/src/utils.c.o.d -o CMakeFiles/rdbms.dir/src/utils.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/utils.c
 
 CMakeFiles/rdbms.dir/src/utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/utils.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/utils.c > CMakeFiles/rdbms.dir/src/utils.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/utils.c > CMakeFiles/rdbms.dir/src/utils.c.i
 
 CMakeFiles/rdbms.dir/src/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/utils.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/utils.c -o CMakeFiles/rdbms.dir/src/utils.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/utils.c -o CMakeFiles/rdbms.dir/src/utils.c.s
 
 CMakeFiles/rdbms.dir/src/web.c.o: CMakeFiles/rdbms.dir/flags.make
-CMakeFiles/rdbms.dir/src/web.c.o: /c/Users/RASHID/Desktop/rdbms/src/web.c
+CMakeFiles/rdbms.dir/src/web.c.o: /home/therichgiraffe/Documents/miniRDBMS/src/web.c
 CMakeFiles/rdbms.dir/src/web.c.o: CMakeFiles/rdbms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rdbms.dir/src/web.c.o"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/web.c.o -MF CMakeFiles/rdbms.dir/src/web.c.o.d -o CMakeFiles/rdbms.dir/src/web.c.o -c /c/Users/RASHID/Desktop/rdbms/src/web.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rdbms.dir/src/web.c.o"
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rdbms.dir/src/web.c.o -MF CMakeFiles/rdbms.dir/src/web.c.o.d -o CMakeFiles/rdbms.dir/src/web.c.o -c /home/therichgiraffe/Documents/miniRDBMS/src/web.c
 
 CMakeFiles/rdbms.dir/src/web.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/rdbms.dir/src/web.c.i"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /c/Users/RASHID/Desktop/rdbms/src/web.c > CMakeFiles/rdbms.dir/src/web.c.i
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/therichgiraffe/Documents/miniRDBMS/src/web.c > CMakeFiles/rdbms.dir/src/web.c.i
 
 CMakeFiles/rdbms.dir/src/web.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/rdbms.dir/src/web.c.s"
-	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /c/Users/RASHID/Desktop/rdbms/src/web.c -o CMakeFiles/rdbms.dir/src/web.c.s
+	/usr/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/therichgiraffe/Documents/miniRDBMS/src/web.c -o CMakeFiles/rdbms.dir/src/web.c.s
 
 # Object files for target rdbms
 rdbms_OBJECTS = \
@@ -224,7 +224,7 @@ rdbms.exe: CMakeFiles/rdbms.dir/src/utils.c.o
 rdbms.exe: CMakeFiles/rdbms.dir/src/web.c.o
 rdbms.exe: CMakeFiles/rdbms.dir/build.make
 rdbms.exe: CMakeFiles/rdbms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/c/Users/RASHID/Desktop/rdbms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable rdbms.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable rdbms.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rdbms.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -236,6 +236,6 @@ CMakeFiles/rdbms.dir/clean:
 .PHONY : CMakeFiles/rdbms.dir/clean
 
 CMakeFiles/rdbms.dir/depend:
-	cd /c/Users/RASHID/Desktop/rdbms/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /c/Users/RASHID/Desktop/rdbms /c/Users/RASHID/Desktop/rdbms /c/Users/RASHID/Desktop/rdbms/build /c/Users/RASHID/Desktop/rdbms/build /c/Users/RASHID/Desktop/rdbms/build/CMakeFiles/rdbms.dir/DependInfo.cmake "--color=$(COLOR)" rdbms
+	cd /home/therichgiraffe/Documents/miniRDBMS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/therichgiraffe/Documents/miniRDBMS /home/therichgiraffe/Documents/miniRDBMS /home/therichgiraffe/Documents/miniRDBMS/build /home/therichgiraffe/Documents/miniRDBMS/build /home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles/rdbms.dir/DependInfo.cmake "--color=$(COLOR)" rdbms
 .PHONY : CMakeFiles/rdbms.dir/depend
 

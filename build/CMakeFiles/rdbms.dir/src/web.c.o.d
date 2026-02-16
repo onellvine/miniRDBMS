@@ -1,5 +1,6 @@
-CMakeFiles/rdbms.dir/src/web.c.o: /c/Users/RASHID/Desktop/rdbms/src/web.c \
- /usr/include/stdio.h /usr/include/_ansi.h /usr/include/newlib.h \
+CMakeFiles/rdbms.dir/src/web.c.o: \
+ /home/therichgiraffe/Documents/miniRDBMS/src/web.c /usr/include/stdio.h \
+ /usr/include/_ansi.h /usr/include/newlib.h \
  /usr/include/_newlib_version.h /usr/include/sys/config.h \
  /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
  /usr/include/cygwin/config.h /usr/include/sys/cdefs.h \
@@ -30,4 +31,5 @@ CMakeFiles/rdbms.dir/src/web.c.o: /c/Users/RASHID/Desktop/rdbms/src/web.c \
  /usr/include/cygwin/in.h /usr/include/asm/byteorder.h \
  /usr/lib/gcc/x86_64-pc-cygwin/15.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/sys/_intsup.h \
- /usr/include/cygwin/in6.h /c/Users/RASHID/Desktop/rdbms/include/web.h
+ /usr/include/cygwin/in6.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/web.h

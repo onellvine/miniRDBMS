@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc.exe
 C_DEFINES = 
 
-C_INCLUDES = -I/c/Users/RASHID/Desktop/rdbms/include
+C_INCLUDES = -I/home/therichgiraffe/Documents/miniRDBMS/include
 
 C_FLAGS = -std=gnu11
 

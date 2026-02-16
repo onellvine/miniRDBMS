@@ -1,5 +1,5 @@
 CMakeFiles/rdbms.dir/src/main.c.o: \
- /c/Users/RASHID/Desktop/rdbms/src/main.c /usr/include/stdio.h \
+ /home/therichgiraffe/Documents/miniRDBMS/src/main.c /usr/include/stdio.h \
  /usr/include/_ansi.h /usr/include/newlib.h \
  /usr/include/_newlib_version.h /usr/include/sys/config.h \
  /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
@@ -27,12 +27,13 @@ CMakeFiles/rdbms.dir/src/main.c.o: \
  /usr/include/stdint.h /usr/include/sys/_intsup.h \
  /usr/include/cygwin/signal.h /usr/include/sys/ucontext.h \
  /usr/include/cygwin/stat.h \
- /c/Users/RASHID/Desktop/rdbms/include/executor.h \
- /c/Users/RASHID/Desktop/rdbms/include/ast.h /usr/include/stdlib.h \
- /usr/include/machine/stdlib.h /usr/include/alloca.h \
- /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
- /c/Users/RASHID/Desktop/rdbms/include/token.h \
- /c/Users/RASHID/Desktop/rdbms/include/lexer.h \
- /c/Users/RASHID/Desktop/rdbms/include/myparser.h \
- /c/Users/RASHID/Desktop/rdbms/include/lexer.h \
- /c/Users/RASHID/Desktop/rdbms/include/web.h
+ /home/therichgiraffe/Documents/miniRDBMS/include/executor.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/ast.h \
+ /usr/include/stdlib.h /usr/include/machine/stdlib.h \
+ /usr/include/alloca.h /usr/include/cygwin/stdlib.h \
+ /usr/include/cygwin/wait.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/token.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/lexer.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/myparser.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/lexer.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/web.h

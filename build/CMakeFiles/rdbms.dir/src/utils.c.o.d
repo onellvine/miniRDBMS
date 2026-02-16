@@ -1,8 +1,9 @@
 CMakeFiles/rdbms.dir/src/utils.c.o: \
- /c/Users/RASHID/Desktop/rdbms/src/utils.c /usr/include/stdlib.h \
- /usr/include/machine/ieeefp.h /usr/include/_ansi.h /usr/include/newlib.h \
- /usr/include/_newlib_version.h /usr/include/sys/config.h \
- /usr/include/sys/features.h /usr/include/cygwin/config.h \
+ /home/therichgiraffe/Documents/miniRDBMS/src/utils.c \
+ /usr/include/stdlib.h /usr/include/machine/ieeefp.h /usr/include/_ansi.h \
+ /usr/include/newlib.h /usr/include/_newlib_version.h \
+ /usr/include/sys/config.h /usr/include/sys/features.h \
+ /usr/include/cygwin/config.h \
  /usr/lib/gcc/x86_64-pc-cygwin/15.2.0/include/stddef.h \
  /usr/include/sys/reent.h /usr/include/_ansi.h /usr/include/sys/cdefs.h \
  /usr/include/machine/_default_types.h /usr/include/sys/_types.h \
@@ -10,7 +11,8 @@ CMakeFiles/rdbms.dir/src/utils.c.o: \
  /usr/include/machine/stdlib.h /usr/include/alloca.h \
  /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
  /usr/include/string.h /usr/include/sys/_locale.h /usr/include/strings.h \
- /usr/include/sys/string.h /c/Users/RASHID/Desktop/rdbms/include/utils.h \
+ /usr/include/sys/string.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/utils.h \
  /usr/include/inttypes.h /usr/include/sys/_intsup.h \
  /usr/lib/gcc/x86_64-pc-cygwin/15.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/sys/_stdint.h

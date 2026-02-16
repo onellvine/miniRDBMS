@@ -1,5 +1,5 @@
 CMakeFiles/rdbms.dir/src/catalog.c.o: \
- /c/Users/RASHID/Desktop/rdbms/src/catalog.c \
+ /home/therichgiraffe/Documents/miniRDBMS/src/catalog.c \
  /usr/lib/gcc/x86_64-pc-cygwin/15.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/machine/_default_types.h \
  /usr/include/sys/features.h /usr/include/_newlib_version.h \
@@ -16,7 +16,8 @@ CMakeFiles/rdbms.dir/src/catalog.c.o: \
  /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
  /usr/include/string.h /usr/include/sys/_locale.h /usr/include/strings.h \
  /usr/include/sys/string.h \
- /c/Users/RASHID/Desktop/rdbms/include/catalog.h \
- /c/Users/RASHID/Desktop/rdbms/include/ast.h \
- /c/Users/RASHID/Desktop/rdbms/include/token.h \
- /c/Users/RASHID/Desktop/rdbms/include/utils.h /usr/include/inttypes.h
+ /home/therichgiraffe/Documents/miniRDBMS/include/catalog.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/ast.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/token.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/utils.h \
+ /usr/include/inttypes.h

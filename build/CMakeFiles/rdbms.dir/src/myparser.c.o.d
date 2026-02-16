@@ -1,6 +1,6 @@
 CMakeFiles/rdbms.dir/src/myparser.c.o: \
- /c/Users/RASHID/Desktop/rdbms/src/myparser.c /usr/include/stdio.h \
- /usr/include/_ansi.h /usr/include/newlib.h \
+ /home/therichgiraffe/Documents/miniRDBMS/src/myparser.c \
+ /usr/include/stdio.h /usr/include/_ansi.h /usr/include/newlib.h \
  /usr/include/_newlib_version.h /usr/include/sys/config.h \
  /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
  /usr/include/cygwin/config.h /usr/include/sys/cdefs.h \
@@ -14,11 +14,11 @@ CMakeFiles/rdbms.dir/src/myparser.c.o: \
  /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
  /usr/include/string.h /usr/include/sys/_locale.h /usr/include/strings.h \
  /usr/include/sys/string.h \
- /c/Users/RASHID/Desktop/rdbms/include/myparser.h \
- /c/Users/RASHID/Desktop/rdbms/include/ast.h \
- /c/Users/RASHID/Desktop/rdbms/include/token.h \
- /c/Users/RASHID/Desktop/rdbms/include/lexer.h \
- /c/Users/RASHID/Desktop/rdbms/include/utils.h /usr/include/inttypes.h \
- /usr/include/sys/_intsup.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/myparser.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/ast.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/token.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/lexer.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/utils.h \
+ /usr/include/inttypes.h /usr/include/sys/_intsup.h \
  /usr/lib/gcc/x86_64-pc-cygwin/15.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/sys/_stdint.h
