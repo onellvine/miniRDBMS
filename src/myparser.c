@@ -360,6 +360,7 @@ static ASTNode *parse_update(Parser *p)
             error("Expected column name");
         // printf("Column name: %s\n", p->current.lexme);
         Token col = p->current;
+        assigns[assign_count].column = strdup(col.lexme);
         advance(p);
 
         expect(p, TOK_EQUAL, "Expected EQUAL");
@@ -369,6 +370,7 @@ static ASTNode *parse_update(Parser *p)
         {
             val = p->current;
             // printf("Column value: %s\n", val.lexme);
+            assigns[assign_count].value = strdup(val.lexme);
             advance(p);
         }
         else
@@ -376,26 +378,24 @@ static ASTNode *parse_update(Parser *p)
             error("Expected literal in SET clause");
             return NULL;
         }
-        // printf("Token type: %d\n",p->current.type);
-        UpdateAssign assign = {
-            .column = strdup(col.lexme),
-            .value = strdup(val.lexme)
-        };
-        assigns[assign_count++] = assign;
+
+        assign_count++; // Increment assigns before checking next token
         
         if(p->current.type != TOK_COMMA)
             break;
         advance(p);
+
+        
     }
 
-    // update statement has a WHERE clause
+    // update statement has a WHERE clause (ideally on primary key)
     if(p->current.type == TOK_WHERE) {
         // printf("Update has WHERE clause. Parsing WHERE...\n");
         node->update.where = parse_where(p);
     }
 
-    node->update.assignments = malloc(sizeof(UpdateAssign) * assign_count);
     node->update.assign_count = assign_count;
+    node->update.assignments = malloc(sizeof(UpdateAssign) * assign_count);
     memcpy(node->update.assignments, assigns, sizeof(UpdateAssign) * assign_count);
 
     return node;

@@ -154,6 +154,37 @@ static inline void ast_free(ASTNode *node)
         }
     }
 
+    if(node->type == AST_UPDATE)
+    {
+        for(int i = 0; i < node->update.assign_count; i++)
+        {
+            free(node->update.assignments[i].column);
+            free(node->update.assignments[i].value);
+        }
+        if(node->update.where)
+        {
+            free(node->update.where->coulmn);
+            free(node->update.where->value->value);
+            free(node->update.where->value);
+            free(node->update.where);          
+        }
+        free(node->update.table_name);
+    }
+
+    if (node->type == AST_DELETE)
+    {
+        free(node->delete.table_name);
+        // free(node->delete.pk_value);
+        
+        if(node->delete.where)
+        {
+            free(node->delete.where->coulmn);
+            free(node->delete.where->value->value);
+            free(node->delete.where->value);
+            free(node->delete.where);          
+        }       
+    }
+    
     free(node);
 }
 

@@ -18,7 +18,7 @@ static int skip_schema(FILE *f)
         uint32_t name_len;
         fread(&name_len, sizeof(name_len), 1, f);
         fseek(f, name_len, SEEK_CUR); // skip name
-        fseek(f, 3, SEEK_CUR); // skip type + primary_key + unique
+        fseek(f, 3 * sizeof(uint8_t), SEEK_CUR); // skip type + primary_key + unique
     }
 
     return 0;
@@ -182,9 +182,9 @@ int storage_insert(InsertStmt *insert)
         fseek(f, name_len, SEEK_CUR);
 
         uint8_t type, pk, unique;
-        fread(&type, 1, 1, f);
-        fread(&pk, 1, 1, f);
-        fread(&unique, 1, 1, f);
+        fread(&type, sizeof(type), 1, f);
+        fread(&pk, sizeof(pk), 1, f);
+        fread(&unique, sizeof(unique), 1, f);
 
         if(pk)
             pk_index = i;
@@ -308,9 +308,9 @@ int storage_delete_by_pk(const char *table, Expr *pk_value)
 
 
         uint8_t type, pk, unique;
-        fread(&type, 1, 1, src);
-        fread(&pk, 1, 1, src);
-        fread(&unique, 1, 1, src);
+        fread(&type, sizeof(type), 1, src);
+        fread(&pk, sizeof(pk), 1, src);
+        fread(&unique, sizeof(unique), 1, src);
 
         if(pk) pk_index = i;
     }
@@ -412,12 +412,18 @@ int storage_update_by_pk(const char *table, Expr *pk_value, UpdateAssign *assign
         col_names[i] = malloc(len + 1);
         fread(col_names[i], 1, len, src);
         col_names[i][len] = '\0';
-        printf("col name[%i]: %s\n", i, col_names[i]);
+        // printf("col name[%i]: %s\n", i, col_names[i]);
 
-        uint8_t meta[3];
-        fread(meta, 1, 3, src);
+        // uint8_t meta[3];
+        // fread(meta, 1, 3, src);
+        // if(meta[1]) pk_index = i;
 
-        if(meta[1]) pk_index = i;
+        uint8_t type, pk, unique;
+        fread(&type, sizeof(type), 1, src);
+        fread(&pk, sizeof(pk), 1, src);
+        fread(&unique, sizeof(unique), 1, src);
+
+        if(pk) pk_index = i;
     }
 
     int updated = 0;
@@ -436,10 +442,10 @@ int storage_update_by_pk(const char *table, Expr *pk_value, UpdateAssign *assign
             values[i] = malloc(len + 1);
             fread(values[i], 1, len, src);
             values[i][len] = '\0';
-            printf("values[%i]: %s\n", i, values[i]);
+            // printf("values[%i]: %s\n", i, values[i]);
         }
         
-        if(strcmp(values[pk_index], pk_value->value) == 0)
+        if(strcmp(values[pk_index], pk_value->value) == 0) // ?
         {
             for(int a = 0; a < assign_count; a++)
             {
@@ -447,10 +453,8 @@ int storage_update_by_pk(const char *table, Expr *pk_value, UpdateAssign *assign
                 {
                     if(strcmp(assigns[a].column, col_names[c]) == 0)
                     {
-                        printf("cvalues[%i]: %s\n", c, values[c]);
                         free(values[c]);
                         values[c] = strdup(assigns[a].value);
-                        printf("cvalues[%i]: %s\n", c, values[c]);
                     }
                 }
             }

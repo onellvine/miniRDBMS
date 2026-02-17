@@ -1,3 +1,0 @@
-/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles/rdbms.dir
-/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles/edit_cache.dir
-/home/therichgiraffe/Documents/miniRDBMS/build/CMakeFiles/rebuild_cache.dir
