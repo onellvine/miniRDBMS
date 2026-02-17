@@ -12,5 +12,6 @@ typedef struct _DiskColumnMeta {
 
 char *strdup(const char *s);
 char *strndup(const char *s, size_t n);
+int get_padding(const char *c);
 
 #endif /* __UTILS_H__ */

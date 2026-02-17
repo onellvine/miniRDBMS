@@ -28,3 +28,10 @@ char *strndup(const char *s, size_t n)
     return p;
 }
 
+int get_padding(const char *c)
+{
+    int len = strlen(c);
+    int padding = (len > 16 ? len : 16);
+
+    return padding;
+}

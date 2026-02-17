@@ -21,4 +21,6 @@ CMakeFiles/rdbms.dir/src/executor.c.o: \
  /home/therichgiraffe/Documents/miniRDBMS/include/mystorage.h \
  /usr/lib/gcc/x86_64-pc-cygwin/15.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/sys/_intsup.h \
- /usr/include/sys/_stdint.h
+ /usr/include/sys/_stdint.h \
+ /home/therichgiraffe/Documents/miniRDBMS/include/utils.h \
+ /usr/include/inttypes.h

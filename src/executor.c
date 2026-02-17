@@ -5,6 +5,7 @@
 #include "catalog.h"
 #include "executor.h"
 #include "mystorage.h"
+#include "utils.h"
 
 
 static void pk_check_cb(char **values, int count, void *ctx)
@@ -63,11 +64,17 @@ static void select_row_cb(char **values, int count, void *ctx)
         // printf("Callback NOT WHERE match: %d\n", where_match);
         return;
     }
-    
+
+    int padding = 4;
     for(int i = 0; i < c->proj_count; i++)
     {
+        // if(c->schema->columns[i].type == COL_INT)
+        //     padding = 5;
+        // else if(c->schema->columns[i].type == COL_TEXT)        
+        padding = get_padding(c->schema->columns[i].name);
+
         int idx = c->proj_cols[i];
-        printf("%s", values[idx]);
+        printf("%*s", padding, values[idx]);
         if(i + 1 < c->proj_count)
             printf(" | ");
     }
@@ -100,7 +107,22 @@ static void exec_select(SelectStmt *s)
 
     if(s->select_all)
     {
-        proj_count = schema.column_count;
+        int padding = 4;
+        int column_count = schema.column_count;
+
+        for(int i = 0; i < column_count; i++)
+        {
+            // if(schema.columns[i].type == COL_INT)
+            //     padding = 5;
+            // else if(schema.columns[i].type == COL_TEXT)
+            padding = get_padding(schema.columns[i].name);
+
+            printf("%*s", padding, schema.columns[i].name);
+            if(i + 1 < column_count) printf(" | ");
+        }
+        printf("\n");
+
+        proj_count = column_count; // schema.column_count;
         proj_cols = malloc(sizeof(int) * proj_count);
         for(int i = 0; i < proj_count; i++)
             proj_cols[i] = i;
@@ -109,6 +131,29 @@ static void exec_select(SelectStmt *s)
     {
         proj_count = s->column_count;
         proj_cols = malloc(sizeof(int) * proj_count);
+
+        int padding = 4;
+        int column_count = proj_count;
+
+        for(int i = 0; i < column_count; i++)
+        {
+
+            int n = 0;
+            for( ; n < schema.column_count ; )
+            {
+                if(strcmp(s->columns[i], schema.columns[n].name) == 0) {
+                    // if(schema.columns[n].type == COL_INT)
+                    //     padding = 5;
+                    // else if(schema.columns[n].type == COL_TEXT)
+                    padding = get_padding(schema.columns[n].name);
+                }
+                n++;
+            }
+
+            printf("%*s", padding, s->columns[i]);
+            if(i + 1 < column_count) printf(" | ");
+        }
+        printf("\n");
 
         for(int i = 0; i < proj_count; i++)
         {
@@ -133,7 +178,7 @@ static void exec_select(SelectStmt *s)
     }
 
     SelectCtx ctx = {
-        .stmt= s,
+        .stmt = s,
         .schema = &schema,
         .proj_cols = proj_cols,
         .proj_count = proj_count

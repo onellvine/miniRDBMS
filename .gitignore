@@ -1,3 +1,5 @@
-/build/*
-/build/*.exe
-/build/**/*.yaml
+# Ignore everything inside build/
+build/*
+
+# But keep the build directory itself
+!build/
