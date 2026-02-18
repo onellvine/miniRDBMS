@@ -412,7 +412,6 @@ int storage_update_by_pk(const char *table, Expr *pk_value, UpdateAssign *assign
         col_names[i] = malloc(len + 1);
         fread(col_names[i], 1, len, src);
         col_names[i][len] = '\0';
-        // printf("col name[%i]: %s\n", i, col_names[i]);
 
         // uint8_t meta[3];
         // fread(meta, 1, 3, src);
@@ -442,10 +441,9 @@ int storage_update_by_pk(const char *table, Expr *pk_value, UpdateAssign *assign
             values[i] = malloc(len + 1);
             fread(values[i], 1, len, src);
             values[i][len] = '\0';
-            // printf("values[%i]: %s\n", i, values[i]);
         }
         
-        if(strcmp(values[pk_index], pk_value->value) == 0) // ?
+        if(strcmp(values[pk_index], pk_value->value) == 0)
         {
             for(int a = 0; a < assign_count; a++)
             {

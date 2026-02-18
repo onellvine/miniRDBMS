@@ -1,5 +1,8 @@
 # Ignore everything inside build/
-build/*
+/build/*
 
 # But keep the build directory itself
 !build/
+
+/data/*
+

@@ -56,6 +56,8 @@ void start_http_server(void)
     {
         int client = accept(server, NULL, NULL);
         handle_request(client);
+        printf("-----------------------------------------");
+        printf("-----------------------------------------\n");
         close(client);
     }
 }
