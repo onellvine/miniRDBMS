@@ -7,6 +7,8 @@
 #include "mystorage.h"
 #include "utils.h"
 
+extern char *result;
+
 
 static void pk_check_cb(char **values, int count, void *ctx)
 {
@@ -29,17 +31,28 @@ static void unique_check_cb(char **values, int count, void *ctx)
 static void join_right_cb(char **rvals, int rcount, void *ctx)
 {
     JoinCtx *c = ctx;
+    char token[1024];
 
     if(strcmp(c->values[c->left_join_idx], rvals[c->right_join_idx]) == 0)
     {
         // Print joined row
         for(int i = 0; i < c->left_count; i++)
+        {
             printf("%16s | ", c->values[i]);
+            snprintf(token, 1024, "%16s | ", c->values[i]);
+            strcat(result, token);
+        }
         
         for(int i = 0; i < rcount; i++)
+        {
             printf("%16s | ", rvals[i]);
+            snprintf(token, 1024, "%16s | ", rvals[i]);
+            strcat(result, token);
+        }
         
         printf("\n");
+        // strcat(token, "\n");
+        strcat(result, "\n");
     }
 }
 
@@ -66,6 +79,7 @@ static void select_row_cb(char **values, int count, void *ctx)
     }
 
     int padding = 4;
+    char token[1024] = {0};
     for(int i = 0; i < c->proj_count; i++)
     {
         // if(c->schema->columns[i].type == COL_INT)
@@ -75,10 +89,16 @@ static void select_row_cb(char **values, int count, void *ctx)
 
         int idx = c->proj_cols[i];
         printf("%*s", padding, values[idx]);
-        if(i + 1 < c->proj_count)
+        snprintf(token, 1024, "%*s", padding, values[idx]);
+        if(i + 1 < c->proj_count) {
             printf(" | ");
+            strcat(token, " | ");
+            strcat(result, token);
+        }
     }
     printf("\n");
+    strcat(token, "\n");
+    strcat(result, token);
 }
 
 
@@ -99,9 +119,11 @@ static void exec_select(SelectStmt *s)
     if(catalog_load(s->table, &schema) != 0)
     {
         printf("Error: table '%s' not found\n", s->table);
+        snprintf(result, 1024, "Error: table '%s' not found\n", s->table);
         return;
     }
 
+    char token[1024] = {0};
     int *proj_cols = NULL;
     int proj_count = 0;
 
@@ -118,9 +140,16 @@ static void exec_select(SelectStmt *s)
             padding = get_padding(schema.columns[i].name);
 
             printf("%*s", padding, schema.columns[i].name);
-            if(i + 1 < column_count) printf(" | ");
+            snprintf(token, 1024, "%*s", padding, schema.columns[i].name);
+            if(i + 1 < column_count) {
+                printf(" | ");
+                strcat(token, " | ");
+                strcat(result, token);
+            }
         }
         printf("\n");
+        strcat(token, "\n");
+        strcat(result, token);
 
         proj_count = column_count; // schema.column_count;
         proj_cols = malloc(sizeof(int) * proj_count);
@@ -151,9 +180,17 @@ static void exec_select(SelectStmt *s)
             }
 
             printf("%*s", padding, s->columns[i]);
-            if(i + 1 < column_count) printf(" | ");
+            snprintf(token, 1024, "%*s", padding, s->columns[i]);
+            strcat(result, token);
+            if(i + 1 < column_count) {
+                printf(" | ");
+                strcat(token, " | ");
+                strcat(result, token);
+            }
         }
         printf("\n");
+        strcat(token, "\n");
+        strcat(result, token);
 
         for(int i = 0; i < proj_count; i++)
         {
@@ -162,6 +199,7 @@ static void exec_select(SelectStmt *s)
             if(idx < 0)
             {
                 printf("Error: unknown column [specified]: '%s'\n", s->columns[i]);
+                snprintf(result, 1024, "Error: unknown column [specified]: '%s'\n", s->columns[i]);
                 goto cleanup;
             }
             proj_cols[i] = idx;
@@ -173,6 +211,7 @@ static void exec_select(SelectStmt *s)
         if(catalog_column_index(&schema, s->where->coulmn) < 0)
         {
             printf("Error: unknown column [in WHERE]: '%s'\n", s->where->coulmn);
+            snprintf(result, 1024, "Error: unknown column [in WHERE]: '%s'\n", s->where->coulmn);
             goto cleanup;            
         }
     }
@@ -199,11 +238,13 @@ static void execute_select_join(SelectStmt *s)
     if(catalog_load(s->table, &left))
     {
         printf("Error: from table not found\n");
+        snprintf(result, 1024, "Error: from table '%s' not found\n", s->table);
         return;
     }
     if(catalog_load(s->join->right_table, &right))
     {
         printf("Error: right table not found\n");
+        snprintf(result, 1024, "Error: right table '%s' not found\n", s->join->right_table);
         return;
     }
 
@@ -219,6 +260,7 @@ static void execute_select_join(SelectStmt *s)
     if(left_idx < 0 || right_idx < 0)
     {
         printf("Error: join column not found\n");
+        strcat(result, "Error: join column not found\n");
         return;
     }
 
@@ -237,16 +279,21 @@ static void execute_select_join(SelectStmt *s)
 
 void execute(ASTNode *node)
 {
+    result = calloc(1024, sizeof(char));
     TableSchema schema;
     int pk;
 
     switch(node->type)
     {
         case AST_CREATE:
-            if(storage_create_table(&node->create) == 0)
+            if(storage_create_table(&node->create) == 0) {
                 printf("Table created\n");
-            else
+                strcat(result, "Table created\n");
+            }
+            else {
                 printf("Create table failed\n");
+                strcat(result, "Create table failed\n");
+            }
             break;
 
         case AST_INSERT:
@@ -254,11 +301,13 @@ void execute(ASTNode *node)
             if(catalog_load(node->insert.table_name, &schema))
             {
                 printf("Error: table not found\n");
+                snprintf(result, 1024, "Error: table '%s' not found\n", node->insert.table_name);
                 break;
             }
             if(schema.column_count != node->insert.row.value_count)
             {
                 printf("Error: column count mismatch\n");
+                strcat(result, "Error: column count mismatch\n");
                 catalog_free(&schema);
                 break;
             }
@@ -266,6 +315,7 @@ void execute(ASTNode *node)
             if(pk_index == -2)
             {
                 printf("Error: multiple primary keys defined\n");
+                strcat(result, "Error: multiple primary keys defined\n");
                 catalog_free(&schema);
                 break;
             }
@@ -283,6 +333,7 @@ void execute(ASTNode *node)
                 if(ctx.duplicate_found)
                 {
                     printf("Error: duplicate primary key value '%s'\n", pk_value);
+                    snprintf(result, 1024, "Error: duplicate primary key value '%s'\n", pk_value);
                     catalog_free(&schema);
                     break;
                 }
@@ -308,6 +359,8 @@ void execute(ASTNode *node)
                 {
                     printf("Error: duplicate value '%s' for UNIQUE column '%s'\n", 
                         val, schema.columns[col].name);
+                    snprintf(result, 1024, "Error: duplicate value '%s' for UNIQUE column '%s'\n", 
+                        val, schema.columns[col].name);
                     catalog_free(&schema);
                     break;
                 }
@@ -320,10 +373,14 @@ void execute(ASTNode *node)
             }
 
             catalog_free(&schema);
-            if(storage_insert(&node->insert) == 0)
+            if(storage_insert(&node->insert) == 0) {
                 printf("Row inserted\n");
-            else
+                strcat(result, "Row inserted\n");
+            }
+            else {
                 printf("Insert row failed\n");
+                strcat(result, "Insert row failed\n");
+            }
             break;
         case AST_SELECT:
             if(node->select.join)
@@ -336,12 +393,14 @@ void execute(ASTNode *node)
             if(catalog_load(node->update.table_name, &schema))
             {
                 printf("Error: table not found\n");
+                snprintf(result, 1024, "Error: table '%s' not found\n", node->update.table_name);
                 break;
             }
             int pk = catalog_primary_key_index(&schema);
             if(pk < 0 || strcmp(schema.columns[pk].name, node->update.where->coulmn) != 0)
             {
                 printf("Error: UPDATE requires WHERE on PRIMARY KEY\n");
+                strcat(result, "Error: UPDATE requires WHERE on PRIMARY KEY\n");
                 break;
             }
             /* Prevent PK modification */ 
@@ -350,6 +409,7 @@ void execute(ASTNode *node)
                 if(strcmp(node->update.assignments[i].column, schema.columns[pk].name) == 0)
                 {
                     printf("Error: cannot update PRIMARY KEY\n");
+                    strcat(result, "Error: cannot update PRIMARY KEY\n");
                     catalog_free(&schema);
                     break;
                 }
@@ -360,35 +420,42 @@ void execute(ASTNode *node)
                 node->update.assignments,
                 node->update.assign_count
             );
-            if(rc == 0)
+            if(rc == 0) {
                 printf("Row updated\n");
-            else
+                strcat(result, "Row updated\n");
+            }
+            else {
                 printf("Row not found\n");
+                strcat(result, "Row not found\n");
+            }
             break;
         }
         case AST_DELETE:
             if(catalog_load(node->delete.table_name, &schema))
             {
                 printf("Error: table not found\n");
+                snprintf(result, 1024, "Error: table '%s' not found\n", node->delete.table_name);
                 break;
             }
             pk = catalog_primary_key_index(&schema);
             if(pk < 0 || strcmp(schema.columns[pk].name, node->delete.where->coulmn) != 0)
             {
                 printf("Error: DELETE requires WHERE on PRIMARY KEY\n");
+                strcat(result, "Error: DELETE requires WHERE on PRIMARY KEY\n");
                 break;
             }
-            if(storage_delete_by_pk(node->delete.table_name, node->delete.where->value) == 0)
-            {
+            if(storage_delete_by_pk(node->delete.table_name, node->delete.where->value) == 0) {
                 printf("Row deleted\n");
+                strcat(result, "Row deleted\n");
             }
-            else
-            {
+            else {
                 printf("Row not found");
+                strcat(result, "Row not found\n");
             }
             break;        
         default:
             printf("Execution not implemented\n");
+            strcat(result, "Execution not implemented\n");
             break;
     }
 }

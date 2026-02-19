@@ -8,6 +8,10 @@
 #include "web.h"
 
 
+// sql execution result to send to client in http mode
+char *result; 
+
+
 void execute_sql(const char *sql)
 {
     Lexer l;
