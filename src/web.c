@@ -13,6 +13,7 @@
 #define BUF 8192
 
 
+extern char *result;
 extern void execute_sql(const char *sql);
 
 static void handle_request(int client)
@@ -29,12 +30,22 @@ static void handle_request(int client)
     /* Execute SQL */
     execute_sql(body);
 
-    const char *response = 
-        "HTTP/1.1 200 OK\r\n"
-        "Content-Type: text/plain\r\n\r\n"
-        "OK\n";
+    int body_len = strlen(result);
+
+    char response [1024]; // = calloc(1024, sizeof(char));
     
-    write(client, response, sizeof(response));
+    int resp_len = snprintf(response, sizeof(response),
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/plain\r\n"
+        "Content-Length: %d\r\n"
+        "Connection: close\r\n"
+        "\r\n"
+        "%s",
+        body_len,
+        result
+    );
+    
+    write(client, response, resp_len);
 }
 
 void start_http_server(void)
