@@ -3,3 +3,6 @@ build/*
 
 # But keep the build directory itself
 !build/
+
+# Ignore the data directory
+/data/*
